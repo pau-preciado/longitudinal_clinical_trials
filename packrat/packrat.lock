@@ -1,0 +1,99 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.3
+RVersion: 3.1.2
+Repos: CRAN=http://cran.rstudio.com
+
+Package: MASS
+Source: CRAN
+Version: 7.3-37
+Hash: 05cd8a6b7ebab5d30f3d95c8b26cbdf1
+
+Package: ProjectTemplate
+Source: CRAN
+Version: 0.6
+Hash: f0fd230415dcc8e3827dfea0fd0cce72
+
+Package: RColorBrewer
+Source: CRAN
+Version: 1.1-2
+Hash: 5203278413b09be06483c5ac1920bb05
+
+Package: Rcpp
+Source: CRAN
+Version: 0.11.4
+Hash: 1f684f6afd28079e4e609b49f353e49f
+
+Package: colorspace
+Source: CRAN
+Version: 1.2-4
+Hash: b775bd08a10f968fef582304b7c3ab9c
+
+Package: dichromat
+Source: CRAN
+Version: 2.0-0
+Hash: 42be2136555fa4b6167605df56d8cd7c
+
+Package: digest
+Source: CRAN
+Version: 0.6.8
+Hash: 89dc4c8734dad5322bb3c5c2af09056f
+
+Package: ggplot2
+Source: CRAN
+Version: 1.0.0
+Hash: c8bff66238347472f08b6a35608539ff
+Requires: MASS, digest, gtable, plyr, proto, reshape2, scales
+
+Package: gridExtra
+Source: CRAN
+Version: 0.9.1
+Hash: 1cb7af8c140431ec4e99905f1d8adcc4
+
+Package: gtable
+Source: CRAN
+Version: 0.1.2
+Hash: 0cf4a2b54c02b35dec7e74a8ebed12a0
+
+Package: labeling
+Source: CRAN
+Version: 0.3
+Hash: 568a992912caf7eeddfb121924154047
+
+Package: munsell
+Source: CRAN
+Version: 0.4.2
+Hash: fa8af6d040041439b249351e9d16ae9a
+Requires: colorspace
+
+Package: packrat
+Source: CRAN
+Version: 0.4.3
+Hash: 16c72d5c802629fae5a4abca901e0199
+
+Package: plyr
+Source: CRAN
+Version: 1.8.1
+Hash: 7dd935ee4050eaf2973108be2faf245e
+Requires: Rcpp
+
+Package: proto
+Source: CRAN
+Version: 0.3-10
+Hash: 668a9e87cedbdc5f56c396edf1bd2648
+
+Package: reshape2
+Source: CRAN
+Version: 1.4.1
+Hash: c401ef665db07687e1e54fbc60c683bb
+Requires: Rcpp, plyr, stringr
+
+Package: scales
+Source: CRAN
+Version: 0.2.4
+Hash: b8b1af97bd07818605223060386b00dd
+Requires: RColorBrewer, dichromat, labeling, munsell, plyr
+
+Package: stringr
+Source: CRAN
+Version: 0.6.2
+Hash: cdde0cfa0f52cffeaca23a11a3899779

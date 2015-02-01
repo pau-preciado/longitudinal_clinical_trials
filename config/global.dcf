@@ -1,0 +1,11 @@
+version: 0.6
+data_loading: TRUE
+cache_loading: TRUE
+recursive_loading: FALSE
+munging: TRUE
+logging: FALSE
+load_libraries: TRUE
+libraries: reshape, dplyr, ggplot2, stringr, lubridate, tidyr, nlme, lme4
+as_factors: TRUE
+data_tables: FALSE
+attach_internal_libraries: FALSE
