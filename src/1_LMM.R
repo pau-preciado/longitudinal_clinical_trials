@@ -1,0 +1,2 @@
+library(ProjectTemplate)
+load.project()
