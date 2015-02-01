@@ -98,10 +98,41 @@ MASS:::dropterm(m1)
 # Multilevel
 ################
 
-m1.ml <- lmer(value ~ trt*measure + (1 | subject), data = diast1)
+m1.ml <- lmer(value ~ trt + measure + (measure | subject), data = diast1)
 arm:::display(m1.ml)
 
-m2.ml <- lmer(value ~ trt*measure + (measure | subject), data = diast1)
+m2.ml <- lmer(value ~ trt + measure + age + (measure | subject), data = diast1)
 arm:::display(m2.ml)
+summary(m2.ml)
 
 anova(m1.ml, m2.ml)
+
+# Residual analysis
+
+res1 <- fortify(m2.ml)
+res1
+
+# QQ norm
+par(mfrow = c(1,2))
+qqnorm(filter(res1, trt == "A")$.resid, 
+       main = "Normal Q-Q Plot for residuals\nTreatment A",
+       cex.main = 1, pch = 16, col = "gray50")
+qqline(filter(res1, trt == "A")$.resid, col = 2)
+qqnorm(filter(res1, trt == "B")$.resid, 
+       main = "Normal Q-Q Plot for residuals\nTreatment B",
+       cex.main = 1, pch = 16, col = "gray50")
+qqline(filter(res1, trt == "B")$.resid, col = 2)
+par(mfrow = c(1,1))
+
+ks.test(filter(res1, trt == "B")$.scresid, "pnorm")
+ks.test(filter(res1, trt == "A")$.scresid, "pnorm")
+
+# Fitted vs residuals
+ggplot(res1, aes(x = .fitted, y = .scresid)) +
+     geom_point() +
+     geom_hline(yintercept = c(-2,2), lty = 2) +
+     facet_wrap(~trt, scales = "free")
+
+
+
+
